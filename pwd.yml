@@ -134,7 +134,7 @@ services:
     ports:
       - "8090:8080"
     labels:
-      - "traefik.http.middlewares.desk-auth.basicauth.users=nurhidayat:$$apr1$$7OjtEEKX$$8I199OROu5ImbmQyVoIoz/"
+      - - "traefik.http.middlewares.desk-auth.basicauth.users=nurhidayat:$apr1$7OjtEEKX$8I199OROu5ImbmQyVoIoz/"
       - "traefik.http.routers.desk-protected.rule=Host(`os.nanotekno.com`) && (PathPrefix(`/app`) || PathPrefix(`/desk`))"
       - "traefik.http.routers.desk-protected.entrypoints=https"
       - "traefik.http.routers.desk-protected.tls=true"
