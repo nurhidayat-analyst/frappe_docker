@@ -142,6 +142,7 @@ services:
       - "traefik.http.routers.desk-protected.tls.certresolver=letsencrypt"
       - "traefik.http.routers.desk-protected.middlewares=desk-auth"
       - "traefik.http.routers.desk-protected.priority=100"
+      - "traefik.http.routers.https-0-y130y9t4ix3hki0jb2iyb8a5-frontend.middlewares=gzip"
 
 
   queue-long:
