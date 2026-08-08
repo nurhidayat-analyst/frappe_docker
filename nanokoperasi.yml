@@ -134,6 +134,7 @@ services:
     ports:
       - "8091:8080"
     labels:
+      - "traefik.enable=true"
       - "traefik.http.middlewares.desk-auth.basicauth.users=nurhidayat:$apr1$N9cVlVfY$mWsh2DAjfJ6D6kenaCYqC/"
       - "traefik.http.middlewares.desk-auth.basicauth.removeheader=true"
       - "traefik.http.routers.desk-protected.rule=Host(`staging.neo.nanotekno.com`) && (PathPrefix(`/app`) || PathPrefix(`/desk`))"
